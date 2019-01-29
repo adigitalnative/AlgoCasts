@@ -38,9 +38,13 @@ function reverseInt(n) {
   // Reverse the integer
   const reversed = parseInt(n.toString().split('').reverse().join(''))
 
-  // If the value of n is negative, return negative version of reversed value.
-  // If it is positive or 0, return the reversed value
-  return Math.sign(n) === 1 || Math.sign(n) === 0 ? reversed : -reversed
+  // // One way
+  // // If the value of n is negative, return negative version of reversed value.
+  // // If it is positive or 0, return the reversed value
+  // return Math.sign(n) === 1 || Math.sign(n) === 0 ? reversed : -reversed
+
+  // Another way
+  return reversed * Math.sign(n)
 }
 
 module.exports = reverseInt;
