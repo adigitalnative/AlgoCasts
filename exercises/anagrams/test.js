@@ -25,3 +25,8 @@ test('"A tree, a life, a bench" is not an anagram of "A tree, a fence, a yard"',
     anagrams('A tree, a life, a bench', 'A tree, a fence, a yard')
   ).toBeFalsy();
 });
+
+// Add test for strings of same length which are NOT anagrams
+test('"Jane sees a dog" is not an anagram of "John sees a dog"', () => {
+  expect(anagrams('Jane sees a dog', 'John sees a dog')).toBeFalsy();
+});
