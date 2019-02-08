@@ -7,6 +7,17 @@
 //   capitalize('a lazy fox') --> 'A Lazy Fox'
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
-function capitalize(str) {}
+function capitalize(str) {
+  // Using slice, one line version (but would probably break out the arrow function for readability)
+  return str.split(" ").map(word => word[0].toUpperCase() + word.slice(1)).join(" ")
+
+  // // My first blush version
+  // return str.split(" ").map(word => {
+  //   array = word.split("")
+  //   array[0] = array[0].toUpperCase()
+  //   return array.join("")
+  // }).join(" ")
+
+}
 
 module.exports = capitalize;
